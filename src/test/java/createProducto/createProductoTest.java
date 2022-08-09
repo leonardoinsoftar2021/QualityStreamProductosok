@@ -1,6 +1,6 @@
 package createProducto;
 
-import static org.junit.Assert.*;
+
 
 import org.junit.After;
 import org.junit.Before;
@@ -32,6 +32,9 @@ public class createProductoTest {
 	@Test
 	public void test()throws Exception {
 		CreateProductoPage.getIntoUser(BaseData.EMAIL,BaseData.PASSWORD);
+		CreateProductoPage.createProduct(BaseData.PRODUCT_CODE, BaseData.PRODUCT_NAME, BaseData.PRICE_PRODUCT, 
+				BaseData.DISCOUT_PERCENTAJE, BaseData.LOCAL_PRICE, BaseData.NATIONAL_PRICE, BaseData.DESCRIPTION_PRODUCT,
+				BaseData.ENTER_CATEGORIES, BaseData.ENTER_FEATURES);
 	}
 
 }
