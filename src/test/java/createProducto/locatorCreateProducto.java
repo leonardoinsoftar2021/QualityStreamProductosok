@@ -25,5 +25,5 @@ public class locatorCreateProducto {
 	public static final By LOCATOR_BUTTON_ADD = By.xpath("//*[@id=\"ngwizard\"]/div[1]/ng-wizard-step[2]/div/div/div[2]/div[2]/button");
 	public static final By LOCATOR_ENTER_FEATURES = By.xpath("//*[@id=\"ngwizard\"]/div[1]/ng-wizard-step[2]/div/div/div[3]/div[1]/div/ng-autocomplete/div/div[1]/input");
 	public static final By LOCATOR_BUTTON_ADD1 = By.xpath("//*[@id=\"ngwizard\"]/div[1]/ng-wizard-step[2]/div/div/div[3]/div[2]/button");
-	public static final By LOCATOR_IMG_PRODUCT1 = By.cssSelector("button[class=\"mat-button-ripple mat-ripple\"]");
+	public static final By LOCATOR_IMG_PRODUCT1 = By.xpath("//*[@id=\"ngwizard\"]/div[1]/ng-wizard-step[3]/div/div[1]/div/div[2]/input-file/div/div[2]/div/div/button");
 }

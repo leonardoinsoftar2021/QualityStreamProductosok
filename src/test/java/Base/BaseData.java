@@ -15,6 +15,6 @@ public class BaseData {
 		public static final String NATIONAL_PRICE = "5";
 		public static final String DESCRIPTION_PRODUCT = "Buena calidad";
 		public static final String ENTER_CATEGORIES = "Celulares";
-		public static final String ENTER_FEATURES = "Celulares";
+		public static final String ENTER_FEATURES = "Rosado";
 
 }

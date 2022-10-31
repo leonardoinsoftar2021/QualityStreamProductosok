@@ -69,18 +69,12 @@ public void createProduct(String codeProduct, String nameProduct, String pricePr
 		Thread.sleep(3000);
 		click(locatorCreateProducto.LOCATOR_BUTTON_NEXT);
 		File file2 = new File("./src/test/resources/Imagenes/baseplus.png");
-        String phat2 = file1.getAbsolutePath();
-        File file3 = new File("./src/test/resources/Imagenes/celular3.jpg");
-        String phat3 = file1.getAbsolutePath();
-        File file4 = new File("./src/test/resources/Imagenes/celulares.jpeg");
-        String phat4 = file1.getAbsolutePath();
-        Thread.sleep(3000);
+        String phat2 = file2.getAbsolutePath();
+       
         driver.findElement(locatorCreateProducto.LOCATOR_IMG_PRODUCT1).sendKeys(phat2);
-		Thread.sleep(3000);
-		driver.findElement(locatorCreateProducto.LOCATOR_IMG_PRODUCT1).sendKeys(phat3);
-		Thread.sleep(3000);
-		driver.findElement(locatorCreateProducto.LOCATOR_IMG_PRODUCT1).sendKeys(phat4);
-		Thread.sleep(3000);
+        
+	
+		
 		
 	
 	}catch (NoSuchElementException e) {
