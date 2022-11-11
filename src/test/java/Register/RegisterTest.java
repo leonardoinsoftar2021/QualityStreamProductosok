@@ -30,8 +30,8 @@ public class RegisterTest {
 
 	@Test
 	public void test() throws InterruptedException{
-		registerPage.RegisterUser(BaseData.NAME_COMPLET , BaseData.EMAIL , BaseData.CELL_PHONE, BaseData.PASSWORD,
-				BaseData.BUTTON_FACEBOOK, BaseData.EMAIL_FACE);
+		registerPage.RegisterUser(BaseData.BUTTON, BaseData.NAME_COMPLET , BaseData.EMAIL , BaseData.CELL_PHONE, BaseData.PASSWORD,
+				 BaseData.EMAIL_FACE, BaseData.PASSWORD_FACE);
 	}
 
 }
