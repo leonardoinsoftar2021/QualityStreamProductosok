@@ -1,6 +1,7 @@
 package Register;
 
 import java.util.NoSuchElementException;
+import java.util.Set;
 
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebDriver;
@@ -14,12 +15,12 @@ public class RegisterPage extends BasicWarap {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public void RegisterUser(String NameComplet, String Email, String CellPhone, String Password, String EmailFace, String ButtonFace)
-			throws InterruptedException{
+	public void RegisterUser(String Button, String NameComplet, String Email, String CellPhone, String Password,String EmailFace
+			, String PasswordFace) throws InterruptedException{
 		try {
 			Thread.sleep(5000);
 			click(RegisterLocator.LOCATOR_REGISTER);
-			if(ButtonFace.equals("User")) {
+			if(Button.equals("User")) {
 			type(NameComplet, RegisterLocator.LOCATOR_NAME_COMPLET);
 			type(Email, RegisterLocator.LOCATOR_EMAIL);
 			type(CellPhone, RegisterLocator.LOCATOR_CELL_PHONE);
@@ -27,13 +28,24 @@ public class RegisterPage extends BasicWarap {
 			type(Password, RegisterLocator.LOCATOR_CONFIRMATION_PASSWORD);
 			click(RegisterLocator.LOCATOR_I_AGREE);
 			Thread.sleep(5000);
-			}if(ButtonFace.equals("userFace")) {
-				type(EmailFace, RegisterLocator.LOCATOR_EMAIL_FACE);
-				type(Password, RegisterLocator.LOCATOR_PASSWORD);
-				
-				
-			}
 			click(RegisterLocator.LOCATOR_BUTTON_REGISTER);
+			}if(Button.equals("userFace")) {
+				
+				click(RegisterLocator.LOCATOR_REGISTERFACE);
+				String mainTab = driver.getWindowHandle();
+				Set<String> handles = driver.getWindowHandles();
+				for (String actual: handles) {
+					if(!actual.equalsIgnoreCase(mainTab)) {
+						driver.switchTo().window(actual);
+					}
+				}
+				Thread.sleep(3000);
+				type(EmailFace, RegisterLocator.LOCATOR_EMAIL_FACE);
+				type(PasswordFace, RegisterLocator.LOCATOR_PASSWORD_FACE);
+				
+				click(RegisterLocator.LOCATOR_BUTTON_LOGIN_FACE);
+			}
+			
 		
 			
 		
