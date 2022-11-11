@@ -11,6 +11,8 @@ public class RegisterLocator {
 	public static final By LOCATOR_EMAIL_FACE = By.id("email");
 	public static final By LOCATOR_CELL_PHONE = By.id("telefono");
 	public static final By LOCATOR_PASSWORD = By.id("input-password");
+	public static final By LOCATOR_PASSWORD_FACE = By.id("pass");
+	public static final By LOCATOR_BUTTON_LOGIN_FACE = By.name("login");
 	public static final By LOCATOR_CONFIRMATION_PASSWORD = By.id("input-cpassword");
 	public static final By LOCATOR_I_AGREE = By.id("term");
 	public static final By LOCATOR_BUTTON_REGISTER = By.xpath("/html/body/ngb-modal-window/div/div/app-register-modal/div/form/div[9]/button");
