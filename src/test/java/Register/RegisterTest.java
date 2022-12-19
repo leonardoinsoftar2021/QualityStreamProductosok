@@ -1,6 +1,5 @@
 package Register;
 
-import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
@@ -31,7 +30,8 @@ public class RegisterTest {
 
 	@Test
 	public void test() throws InterruptedException{
-		registerPage.RegisterUser(BaseData.NAME_COMPLET , BaseData.EMAIL , BaseData.CELL_PHONE, BaseData.PASSWORD);
+		registerPage.RegisterUser(BaseData.BUTTON, BaseData.NAME_COMPLET , BaseData.EMAIL , BaseData.CELL_PHONE, BaseData.PASSWORD,
+				 BaseData.EMAIL_FACE, BaseData.PASSWORD_FACE);
 	}
 
 }
